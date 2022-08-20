@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #box {
+            height: 400px;
+            width: 400px;
+            background-color: palevioletred;
+        }
+    </style>
+  </head>
+  <body onclick="showCoords(event)">
+    <div id="box"></div>
+  </body>
+  <script>
+    function showCoords(evt) {
+      console.log("(" + evt.clientX + ",", evt.clientY + ")");
+    }
+  </script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const arr = [2, 5, 1, 7, 9, 26];
+    // arr.forEach(function() {
+    //     console.log(this) // window 会自动调用这个函数，所以也叫回调函数
+    // });
+
+    // arr.forEach((item, i, arr) => {
+    //     console.log(item, i, arr)
+    // });
+
+    // arr.forEach(item => {
+    //     console.log(item)
+    // });
+
+    // arr.forEach(item => console.log(item), console.log(this));
+
+    let a = {fly() {console.log(this)}}
+    a.fly()
+</script>
+</html>

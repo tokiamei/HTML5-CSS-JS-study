@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>with用法</title>
+</head>
+<body>
+    <script>
+        /* 
+            使用 with：
+                能改变 {} 内自由变量的查找方式
+                将 {} 内自由变量，当作 obj 的属性来查找，找不到就会去 {} 外边找变量
+        */
+       const c = 20
+        const obj = { a: 100, b: 200 }
+        with(obj) {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            let x = '华子'
+            console.log(x);
+        }
+    </script>
+</body>
+</html>

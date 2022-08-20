@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 原型链属性问题 -->
+    <script>
+        function F() {
+            console.log('===========')
+        }
+        // F.prototype.x = "xxxxxxxxxxxxxxxx"
+        const obj = new F()
+        obj.x = "YYYYYYYYYYYYYYYYYY"
+        // delete obj.x
+        obj.x = "电玩小子"
+        console.log(obj)
+
+        // const obj01 = new F()
+
+        // console.log(obj01.x)
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>var的作用提升测试</title>
+</head>
+<body>
+    <script>
+        /* 在 条件判断中 */
+        /* if (1 > 2) var a = 3
+        console.log(a) */
+
+        /* 在循环语句中 */
+        /* for (var i = 5; i < 5; i++) {
+            var b = 3
+        }
+        console.log(b) */
+
+        /* 在函数中的 var 在被调用时才会 声明，不调用就不会声明 */
+        function a() {
+            var b = 3
+        }
+        console.log(b)
+    </script>
+</body>
+</html>

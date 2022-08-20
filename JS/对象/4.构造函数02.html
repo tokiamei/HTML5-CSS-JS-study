@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Flyer(name) {
+        this.name = name;
+        console.log("I CAN FLY!!!")
+    }
+    var player = new Flyer("George");
+    // console.log(player instanceof Flyer) // true
+    // console.log(player.toString())
+    // console.log(player)
+
+    player.toString = function() {
+        return "===================="
+    }
+    console.log(player.toString())
+
+    // console.log(player.__proto__.__proto__.hasOwnProperty("toString"))
+</script>
+</html>

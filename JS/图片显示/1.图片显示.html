@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        height: 300px;
+        width: 300px;
+        margin: 0 auto;
+        line-height: 300px;
+        background-color: greenyellow;
+      }
+      /* #container */
+      .btn {
+        margin-top: 100px;
+        float: left;
+        /* position: ; */
+      }
+      img {
+        margin-top: 30px;
+        width: 228px;
+        height: 200px;
+        display: none;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <button class="btn">before</button>
+      <img src="D:\Image\SEER\刻印\灵籁·伴夏.png" alt="" />
+      <img src="D:\Image\SEER\MyGirl\水王.jpg" title="我的水萝莉" />
+      <img src="D:\Image\GIRL\iamge01.png" alt="" />
+      <img src="" alt="" />
+      <img src="" alt="" />
+      <img src="" alt="" />
+      <button class="btn">next</button>
+    </div>
+  </body>
+  <script>
+    const btn = document.querySelectorAll(".btn");
+    const img = document.querySelectorAll("img");
+    let index = 0;
+    img[index].style.display = "block";
+    // console.log(btn, img);
+    btn[0].onclick = () => {
+        if (index <= 0) return
+        img[index].style.display = "none";
+        img[index-1].style.display = "block";
+        index--;
+    } 
+    btn[1].onclick = function ()  {
+        if (index >= img.length-1) return
+        img[index].style.display = "none";
+        img[index+1].style.display = "block";
+        index++;
+    }
+  </script>
+</html>

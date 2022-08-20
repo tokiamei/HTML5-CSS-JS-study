@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+.leftBox {
+
+  display: inline-block;
+
+  width: 100px;
+
+  height: 100px;
+
+  border: 1px solid black;
+
+  border-radius: 10px;
+
+  position: relative;
+
+}
+
+
+
+.rightBox {
+
+  display: inline-block;
+
+  width: 100px;
+
+  height: 100px;
+
+  border: 1px solid black;
+
+  border-radius: 10px;
+
+  position: relative;
+
+}
+
+
+
+.circle {
+
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(25px at center, white, skyblue);
+
+  /* 绝对居中 */
+
+  position: absolute;
+
+  left: 50%;
+
+  margin-left: -25px;
+
+  top: 50%;
+
+  margin-top: -25px;
+
+}
+
+    </style>
+</head>
+<body>
+    <p class="leftBox"></p>
+    <p class="rightBox">
+    <!-- 开启拖拽属性draggable -->    
+    <p class="circle" draggable="true"></p>
+  </p>
+
+  <script>
+    //获取dom元素,分别是左盒子 圆圈 右盒子
+
+  var leftBox = document.querySelector('.leftBox');
+
+var circle = document.querySelector('.circle');
+
+var rightBox = document.querySelector('.rightBox');
+
+var text = document.querySelector('.text');
+
+
+
+//移动circle
+
+circle.
+
+
+
+//开启左盒子的移入事件
+
+leftBox.ondragover = function (event) {
+
+  event.preventDefault();
+
+}
+
+leftBox.ondrop = function () {
+
+  leftBox.appendChild(circle);
+
+}
+
+
+
+//开启右盒子的移入事件
+
+rightBox.ondragover = function (event) {
+
+  event.preventDefault();
+
+}
+
+rightBox.ondrop = function () {
+
+  rightBox.appendChild(circle);
+
+}
+
+
+  </script>
+</body>
+</html>

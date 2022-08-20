@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>利用原型链继承</title>
+</head>
+<body>
+    <script>
+        function f () {}
+        f.prototype.fly = function () { console.log("I CAN FLY") }
+        function g () {}
+        g.prototype = new f()
+        g.prototype.constructor = g
+        const obj = new g()
+        console.log(obj.constructor)
+        obj.fly()
+
+        /* function f () {}
+        f.prototype.fly = function () { console.log("I CAN FLY") }
+        function g () {}
+        g.prototype = f.prototype
+        const obj = new g()
+        console.log(obj.constructor) */
+    </script>
+</body>
+</html>

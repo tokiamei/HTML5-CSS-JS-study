@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="list" style="background-color: skyblue;">
+        <li><a href="javascript:;" class="link">超链接1</a></li>
+        <li><a href="javascript:;" class="link">超链接2</a></li>
+        <li><a href="javascript:;" class="link">超链接3</a></li>
+        <li><a href="javascript:;" class="link">超链接4</a></li>
+    </ul>
+    <button>点击添加超链接</button>
+    <script>
+        /* 为每一个超链接都绑定了一个单机响应函数
+            这种操作很麻烦
+            而且这些操作只能为已有的超链接设置事件，而新添加的超链接必须重新绑定
+
+            事件的委派：
+            - 将事件统一绑定给元素的共同的祖先元素，这样当后代元素的事件触发时，会一直冒泡到祖先元素，从而通过祖先元素的响应函数来处理事件
+            - 事件的委派利用了冒泡
+        */
+        var ul = document.getElementsByTagName("ul")[0]
+        const as = document.getElementsByTagName("a")
+        const btn = document.getElementsByTagName("button")[0]
+
+        btn.onclick = function() {
+            var liNew = document.createElement("li")
+            liNew.innerHTML = "<a href='javascript:;''>新的超链接<a>"
+            ul.appendChild(liNew)
+        }
+        ul.addEventListener("click", function(event) {
+            /* target
+                触发事件的对象
+            */
+            if (event.target.className === "link") alert("=====")
+        })
+
+        // for (var i = 0, len = as.length; i < len; i++) {
+        //     (function(i) {
+        //         as[i].addEventListener("click", () => {
+        //             alert( `这是第${i+1}个超链接`)
+        //         } )
+        //     })(i)
+        // }
+
+        
+    </script>
+</body>
+</html>

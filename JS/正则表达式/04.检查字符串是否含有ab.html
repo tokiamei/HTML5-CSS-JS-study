@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.检查字符串是否含有ab</title>
+</head>
+<body>
+    <script>
+			/* 必须包含连着的 ab 才能正确匹配 */
+        const reg = /ab/i; // 检查字符串中是否含有a b
+        // console.log(reg.test("a")); // false
+        // console.log(reg.test("ba")); // false
+        console.log(reg.test("bavb")); // true
+
+        // const reg01 = /a /i; // 检查字符串中是否含有 a_
+        // console.log(reg01.test("a")); // false，不能随便加空格
+        // console.log(reg01.test("a ")); // true
+
+        // const reg02 = /a|b/i; // 检查字符串中是否含有 a 或 b
+
+        // console.log(reg02.test("a")); // true 
+        // console.log(reg02.test("a")); // true 
+
+        // const reg03 = /a|b|c|d/i; // 检查字符串中是否含有 a 或 b 或 c 或 d
+        // console.log(reg03.test("d")); // true
+
+    </script>
+</body>
+</html>

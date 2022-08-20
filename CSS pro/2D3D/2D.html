@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+    <style>
+        #container {
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            background-color: blueviolet;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        // $('#container').css('width','100px','height', '100px', 'background-color', 'deeppink');
+        $('#container').click(()=>{
+            $('#container').css('transform', 'rotate(45deg)');
+            // alert(1);
+        });
+        // var ctn = document.getElementById('container');
+        // ctn.onclick = ()=>{
+        //     // ctn.style.transform = 'rotate(45deg)';
+        //     // ctn.style.transform = 'translate(20px, 10px)';
+        //     // ctn.style.transform = 'scale(2, 3)';
+        //     // ctn.style.transform = 'scale(0.5, 0.5)';
+        //     // ctn.style.transform = 'skewY(20deg)';
+        //     ctn.style.transform = 'skew(10deg, 20deg)';
+        // };
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 200px;
+            width: 200px;
+            background-color: palevioletred;
+        }
+        #bbox {
+            height: 200px;
+            width: 200px;
+            background-color: yellowgreen;
+        }
+        #dad {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            background-color: rgb(248, 26, 185);
+        }
+        #son {
+            position: relative;
+            top: 100px;
+            height: 150px;
+            width: 150px;
+            background-color: rgba(248, 144, 26, 0.884);
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="bbox"></div>
+    <hr>
+    <div id="dad">
+        <div id="son"></div>
+    </div>
+</body>
+</html>

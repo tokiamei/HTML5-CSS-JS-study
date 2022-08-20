@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 在原型对象加属性之前，是无法调用的，控制台里 f 的原型里有 g 函数知识因为控制台打印最新的信息 */
+        function f () {
+            console.log("========")
+        }
+        // console.log(f.toString())
+        console.log(f.prototype.__proto__)
+        // f.prototype.g()
+        // f.prototype.g = function () {
+        //     console.log("我是g函数")
+        // }
+        // console.log(f.prototype)
+
+        console.log(Array.prototype.__proto__ === Function.prototype.__proto__)
+        console.log(Function.__proto__)
+        // console.log(Function.prototype === Array.prototype)
+
+
+    </script>
+</body>
+</html>

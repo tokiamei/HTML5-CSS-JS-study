@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成一定数量的素数</title>
+</head>
+<body>
+    <script>
+        /* 生成 1000000 个素数，可重复 */
+        function generatePrimes(quota) {
+            /* 判断是不是素数 */
+            function isPrime(n) {
+                for (let i = 2; i <= Math.sqrt(n); ++i) {
+                    if (n % i === 0) {
+                        return false
+                    }
+                }
+                return true
+            }
+            const maximum = quota
+            const primes = []
+            while (primes.length < quota) {
+                const candidate = Math.floor(Math.random() * (maximum + 1))
+                if (isPrime(candidate)) {
+                    primes.push(candidate)
+                }
+            }
+
+            console.log(`素数生成完毕，@@@@@@@${primes}`)
+        }
+        generatePrimes(1000)
+    </script>
+</body>
+</html>

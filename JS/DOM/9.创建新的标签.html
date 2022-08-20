@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container { height: 400px; width: 400px; background-color: pink; }
+        .box { height: 100px; width: 100px; background-color: bisque; margin-top: 10px;}
+        #house { height: 400px; width: 400px; background-color: deeppink; }
+        .room { height: 100px; width: 100px; background-color: skyblue; margin-top: 10px;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box">我是 box01</div>
+        <div class="box">我是 box02</div>
+        <div class="box">我是 box03</div>
+    </div>
+</body>
+<script>
+    const container = document.getElementById("container");
+    const box = container.getElementsByTagName("div");
+    /* const bbox = document.createElement("div"); // 创建一个 div
+    bbox.id = "小丑";
+    bbox.class = "box"; // 为新标签添加类不起作用，为什么 ？？？
+    bbox.innerText = "我是 box04";
+    container.appendChild(bbox);
+
+    // 如何操作创建出来的 script 标签
+    const MyScript = document.createElement("script");
+    // console.log(MyScript);
+    // MyScript.
+    console.log(a); */
+
+    const cbox = document.createTextNode("我是新创建的文本节点！！！");
+    container.appendChild(cbox); // 在父节点上添加
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        /* 一个两个盒子，一个浮动，另一个不浮动，就会发生覆盖 */
+      #box1 {
+        float: left;
+        height: 200px;
+        width: 200px;
+        background-color: palevioletred;
+      }
+      #box2 {
+        height: 300px;
+        width: 300px;
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">我是 box1</div>
+    <div id="box2">我是 box2</div>
+  </body>
+</html>

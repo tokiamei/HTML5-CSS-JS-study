@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>执行上下文</title>
+</head>
+<body>
+    <script>
+        // var a = 10
+        /* function add() {
+            a++
+        }
+        add()
+        console.log(a) // 11 */
+        
+        /* console.log("**********************************")
+        function add(a) {
+            a++
+        }
+        add(3)
+        console.log(a) // 10 */
+
+        /* 注意了，这里 bar 函数调用 foo 是没毛病的，因为 foo 函数在被调用之前已经被赋值好了 */
+        var a = 10
+        var bar = function (x) {
+            var b = 5
+            foo (x + b)
+        }
+        var foo = function (y) {
+            var c = 5
+            console.log(a + c + y)
+        }
+        bar(10)
+    </script>
+</body>
+</html>

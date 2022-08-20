@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.匹配数字</title>
+</head>
+<body>
+    <script>
+        function f(str) {
+            console.log(reg.test(str));
+        }
+
+        reg = /[0-9]/;
+        // f("1"); // true
+        // f("-2"); // true
+        // f("0.0005"); // true
+        // f("5e10"); // true
+        // f("5e-10"); // true
+        // f("E"); // false
+
+        reg = /[^0-9]/;
+        f(10);
+
+    </script>
+</body>
+</html>

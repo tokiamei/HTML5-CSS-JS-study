@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 无法删除全局作用域属性
+    var a = "我是一个全局属性";
+    // console.log(delete a); // false
+
+    let obj = { name: "奥尔德", skill: "幻光星尘破" }
+    
+    // delete obj.skill;
+    // console.log(delete obj.name); // true
+    // console.log(delete obj["skill"]); // true
+
+    // 不可配置的属性无法删除
+    Object.defineProperty(obj, "age", {
+        configurable: false,
+        writable: true,
+        value: 20
+    })
+    // console.log(delete obj.age); // false
+    
+    obj.release = () => { console.log("I CAN RELEASE SKILL!!!"); }
+    // console.log(delete obj.release); // true
+
+    obj.__proto__.name = "盛世之光 奥尔德";
+    console.log(obj.name); // 奥尔德
+    console.log(obj.__proto__.name); // 盛世之光 奥尔德
+    console.log(delete obj.name);
+    console.log(obj.name); // 盛世之光 奥尔德
+
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>15.转义字符</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* \w 任意字母、数字和下划线 */
+			// const reg = /\w/
+			// console.log(reg.test(''));
+			
+			/* \d 所有数字 */
+			// const reg = /\d/
+			// console.log(reg.test(''));
+			
+			/* \D 除了数字 */
+			// const reg = /\D/
+			// console.log(reg.test(' '));
+			
+			/* \s 是否包含空格 */
+			// const reg = /\s/
+			// console.log(reg.test('  '));
+			
+			/* 创建一个正则表达式检查一个字符串是否含有单词 child */
+			/* 利用 \b */
+			const reg = /\bchild\b/
+			console.log(reg.test(' child'));
+		</script>
+	</body>
+</html>

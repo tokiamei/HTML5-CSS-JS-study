@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Tooltip 容器 */
+        .tooltip {
+          position: relative;
+          display: inline-block;
+          border-bottom: 1px dotted black; /* 如果需要在可悬停文本下面显示点线 */
+          margin: 200px;
+        }
+        
+        /* Tooltip 文本 */
+        .tooltip .tooltiptext {
+          visibility: hidden;
+          width: 120px;
+          background-color: #75e575;
+          color: #fff;
+          text-align: center;
+          padding: 5px 0;
+          border-radius: 6px;
+         
+          /* 定位工具提示文本 - 请看下面的例子 */
+          position: absolute;
+          z-index: 1;
+          top: -5px;
+          right: 105%;
+        }
+        
+        /* 将鼠标悬停在工具提示容器上时，显示工具提示文本 */
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+        }
+        </style>
+</head>
+<body>
+    <div class="tooltip">Hover over me
+        <span class="tooltiptext">Tooltip text</span>
+      </div>
+    
+</body>
+</html>

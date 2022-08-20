@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 100px auto;
+            border: 1px solid red;
+            /* 如果文字显示不开自动换行 */
+            /* white-space: normal; */
+
+            /* 如果文字显示不开强制一行显示 */
+            white-space: nowrap;
+
+            /* 超出部分隐藏 */
+            overflow: hidden;
+
+            /* 文本用省略号代替超出部分 */
+            text-overflow: ellipsis;
+        }
+        .box:hover {
+            overflow: visible;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">为了防止这个世界被破坏，为了保护世界的和平，贯彻爱与真实的邪恶，可爱又迷人的反派角色：武藏，小次郎。火箭队经典台词。我们是穿梭在银河中的火箭队，白洞，白色的明天正等着我们。</div>
+</body>
+</html>

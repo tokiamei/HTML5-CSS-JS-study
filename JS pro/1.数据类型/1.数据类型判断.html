@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 值类型：数字、字符串、boolean、null、undefined */
+
+        // 1.判断 undefined
+        // var a;
+        // console.log(a); // undefined
+        // undefined 如何判断 ？
+        // console.log(typeof(a) === "undefined", a === undefined); // true
+
+        // 2.判断 数字
+        // let num = 10
+        // console.log(typeof(num)); // number
+        // console.log(typeof(num) === Number); // false
+        // console.log(typeof(num) === "number"); // true
+
+        // 3.判断 字符串
+        // let str = "战场原荡漾";
+        // console.log(typeof(str)); // string 
+        // console.log(str === "String"); // false
+        // console.log(str === String); // false
+        // console.log(typeof(str) === "string"); // true
+
+        // 4.判断 boolean
+        // let a = true;
+        // console.log(typeof(a) === "boolean"); // true
+
+        // 5.判断 null
+        // let a = null;
+        // console.log(a === null) // 
+
+        const obj = {name: "oo", age: 10};
+        console.log(typeof obj === "object")
+
+
+    </script>
+</body>
+</html>

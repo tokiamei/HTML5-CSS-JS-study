@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08.检查字符串中是否含有 abc 或 bfe 或 xyz</title>
+</head>
+<body>
+    <script>
+        /* 检查字符串中是否含有 abc 或 bfe 或 xyz */
+        reg = /abc|bfe|xyz/;
+        // console.log(reg.test("abc")); // true
+        // console.log(reg.test("ccd")); // false
+        // console.log(reg.test("ccdabc")); // true
+
+        /* 检查字符串中是否含有 abc 或 adc 或 agc */
+        reg = /a[bdg]c/;
+        // console.log(reg.test("ahc")); // false
+        console.log(reg.test("agc")); // true
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* class Person {
+            constructor(age) {
+                this.age = age
+            }
+        }
+        class Student extends Person {
+            constructor(name, age) {
+                super(age)
+                this.name = name
+            }
+        }
+        const p = new Student("混元天尊", 22)
+        console.log( p ) */
+
+        function Parent(){
+            this.age = 20;
+        }
+        function Child(){
+            this.name = '张三'
+        }
+        Child.prototype = new Parent();
+        Child.prototype.constructor = Child
+        let o2 = new Child();
+        console.log( o2, o2.name, o2.age, o2.constructor );
+    </script>
+</body>
+</html>

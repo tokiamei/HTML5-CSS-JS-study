@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = { name: "水晶鸭", age: 200 }
+        console.log(obj instanceof Object) // true
+        console.log(typeof obj)
+
+        function F () {
+            console.log("============")
+        }
+        const ob = new F()
+        console.log(ob.__proto__ === F.prototype) // true
+        console.log(F === F.prototype.constructor) // true
+    </script>
+</body>
+</html>

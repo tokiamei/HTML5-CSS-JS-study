@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 问题：两个盒子嵌套，都加外边距就会出现垂直外边距塌陷 */
+        #box01 {
+            margin: 20px;
+            width: 50%;
+            /* width: 200px; */
+            height: 200px;
+            background-color: rgb(55, 161, 37);
+            /* border: 1px solid red; */
+            overflow: hidden;
+        }
+        #box02 {
+            margin: 20px;
+            width: 50%;
+            /* width: 200px; */
+            height: 100px;
+            background-color: rgb(133, 19, 63);
+            /* 加边框可以解决问题 */
+            /* border: 1px solid rgb(0, 85, 255); */
+        }
+    </style>
+</head>
+<body>
+    <div id="box01">
+        <div id="box02"></div>
+    </div>
+    
+    
+</body>
+</html>

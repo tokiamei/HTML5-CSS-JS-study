@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .tb-promo {
+            position: relative;
+            width: 565px;
+            height: 315px;
+            /* 相对定位不脱离标准流，可以使用 margin 居中 */
+            margin: 100px auto;
+            background-color: palevioletred;
+        }
+        .tb-promo img {
+            width: 565px;
+            height: 315px;
+        }
+        .prev,
+        .next {
+            /* 子绝父相，要让按钮压住图片，必须使用绝对定位 */
+            position: absolute;
+            /* 让绝对定位的按钮垂直居中 */
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background-color: rgba(36, 57, 93, 0.3);
+            text-decoration: none;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+        }
+        .prev {
+            
+            left: 0;
+            /* 让绝对定位的按钮垂直居中 */
+            border-radius: 0 15px 15px 0;
+        }
+        .next {
+            /* 如果一个盒子既有 left 属性，又有 right 属性，则默认执行 left */
+            /* 同理，如果一个盒子既有 top 属性，又有 bottom 属性，则默认执行 top */
+            right: 0;
+            border-radius: 15px 0 0 15px;
+        }
+        .promo-nav {
+            position: absolute;
+            left: 50%;
+            bottom: 15px;
+            margin-left: -35px;
+            width: 70px;
+            height: 12px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .promo-nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            margin: 3px;
+            background-color: #fff;
+        }
+        .promo-nav .selected {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+<body>
+    <div class="tb-promo">
+        <!-- 图片 -->
+        <img src="../images/定位01.jpg" alt="">
+        <!-- 左侧按钮箭头 -->
+        <a href="#" class="prev"> < </a>
+        <!-- 右侧按钮箭头 -->
+        <a href="#" class="next"> > </a>
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+</html>

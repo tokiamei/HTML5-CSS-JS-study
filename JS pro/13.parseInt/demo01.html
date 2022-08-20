@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let str = 'ss'
+    // let n = parseInt(str)
+    // console.log(n, typeof n);
+
+    // console.log(parseInt);
+
+    /* let x = ["1", "2", "3"].map(parseInt)
+    console.log(x); // [1, NaN, NaN] */
+
+    /* 解决方案 */
+    // let arr = ["1", "2", "3"].map(Number)
+    let arr = ["1", "2", "3"].map(str => parseInt(str))
+    console.log(arr);
+  </script>
+</body>
+</html>

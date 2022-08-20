@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>匹配aaa【量词】</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/* 检查 aaa 是否存在 */
+			// const reg = /aaa/
+			// console.log(reg.test('Aaa'));	
+			
+			/* 量词 */
+			// const reg = /a{3}/
+			// console.log(reg.test('asaa '));	
+			
+			// const reg = /(ab){3}/ 
+			// console.log(reg.test('ababab '));	
+			
+			// const reg = /ab{1,3}c/ 
+			// console.log(reg.test('abc '));	
+			
+			/* 出现三次以上 */
+			// const reg = /ab{3,}c/ 
+			// console.log(reg.test('abbbbbc '));	
+			
+			/* + 表示至少出现 1 个 b  相当于 b{1,}*/
+			// const reg = /ab+c/ 
+			// console.log(reg.test('abbbbc '));	
+			
+			/* ? 表示至少出现 0 或 1 个 b，出现 2 次及以上就不行 */
+			// const reg = /ab?c/ 
+			// console.log(reg.test('abbc '));	
+			
+			/* * 表示 b 出现 0 个 或多个 相当于 b{0,} */
+			// const reg = /ab*c/ 
+			// console.log(reg.test('abbbc '));	
+			
+			/* 检查是否以 a 开头 */
+			// const reg = /^a/
+			// console.log(reg.test('ababb'));
+			
+			/* 检查是否以 a 结尾 */
+			// const reg = /a$/
+			// console.log(reg.test('ababba'));
+			
+			/* 检查这个 a 是否既是开头 又是结尾【意思是只能有 1 个 a】 */
+			// const reg = /^a|a$/
+			// console.log(reg.test('bba'));
+			
+			/* 检查这个 a 是否既是开头 又是结尾【可以有 多 个 a】 */
+			const reg = /^a.*a$/
+			console.log(reg.test('abssss1a'));
+			
+			/* 检查这个 a 是否既是开头 又是结尾【可以有 多 个 a】 */
+			// const reg = /./
+			// console.log(reg.test('1ssd2'));
+			
+		</script>
+	</body>
+</html>

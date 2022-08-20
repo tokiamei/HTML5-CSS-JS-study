@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "icomoon";
+        src: url("fonts/icomoon.eot?3ktlgb");
+        src: url("fonts/icomoon.eot?3ktlgb#iefix") format("embedded-opentype"),
+          url("fonts/icomoon.ttf?3ktlgb") format("truetype"),
+          url("fonts/icomoon.woff?3ktlgb") format("woff"),
+          url("fonts/icomoon.svg?3ktlgb#icomoon") format("svg");
+        font-weight: normal;
+        font-style: normal;
+        font-display: block;
+      }
+      h2 {
+        position: relative;
+      }
+      h2::before {
+        position: absolute;
+        left: 220px;
+        top: 10px;
+        content: "\e916";
+        font-family: "icomoon";
+        margin-right: 10px;
+        color:rgb(230, 241, 21);
+        font-size: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>我前面有个字体图标</h2>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.检查字符串中是否含有字母</title>
+</head>
+<body>
+    <script>
+        /* 检查字符串中是否含有字母 */
+        /* 第一种 */
+        reg = /[a-z]/i;
+        console.log(reg.test("吃吃吃吧")); // false
+        console.log(reg.test("acuicuiabcba吃吃吃吧")); // true
+
+        /* 第二种（fool method） */
+        // reg01 = /a|b|... 一直竖线到 z
+
+        /* 第三种 */
+        reg02 = /[abcdefghijklmnopqrstuvwxyz]/i;
+        console.log(reg02.test("吃的啥呢")); //false
+				
+				/* 函数形式 */
+				function f(str) {
+				    console.log(reg.test(str));
+				}
+				
+				reg = /[b-h]/;
+				// console.log(reg.test("a")); // false
+				// console.log(reg.test("b")); // false
+				
+				reg = /[B-h]/;
+				f("C"); // true
+				f("g"); // true
+    </script>
+</body>
+</html>

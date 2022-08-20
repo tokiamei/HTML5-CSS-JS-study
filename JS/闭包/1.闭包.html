@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    function a() {
+      var i = "初始值";
+      i = i + "—_执行a";
+      // 此处的函数b访问了父级函数a中的局部变量i,成为了一个闭包
+      function b() {
+        i = i + "_执行b";
+        console.log(i);
+      }
+      return b;
+    }
+    var c = a(); // 此时 i 的值为 ：初始值—_执行a
+    c(); // 此时 i 的值为 ：初始值—_执行a_执行b
+    c(); // 此时 i 的值为 ：初始值—_执行a_执行b_执行b
+    c();
+  </script>
+</html>

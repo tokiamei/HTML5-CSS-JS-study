@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="clearMyInterval()">清除定时器</button>
+    <script>
+        /* then 方法是时间循环中的微任务 */
+        console.log("坦普瑞");
+        // Promise.resolve("我是成功的 Promise").then( (res) => console.log(res) )
+        
+        const timer = setInterval( () => {
+            console.log(`我是定时器中的代码`)
+        }, 1000)
+        
+
+        new Promise( (resolve, reject) => {
+            console.log("我是 Promise 中的代码噢")
+            resolve()
+        })
+        .then( () => { console.log(`我是then中的代码`) } )
+
+        console.log("虫神重生=================")
+        console.log("虫神重生=================")
+        console.log("虫神重生=================")
+        console.log("虫神重生=================")
+        console.log("虫神重生=================")
+        console.log("虫神重生=================")
+
+        function clearMyInterval() {
+            clearInterval(timer)
+        }
+    </script>
+</body>
+</html>

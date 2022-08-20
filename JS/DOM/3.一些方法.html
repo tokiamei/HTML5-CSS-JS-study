@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="bxo"></div>
+    
+</body>
+<script>
+    // const body = document.getElementsByTagName("body")[0]; // OK
+
+    // 在 document 中有一个属性，它保存的是 body 的引用
+    const body = document.body;
+    // console.log(body);
+    // console.log(body.childNodes);
+    // console.log(body.children);
+
+
+    // document.documentElement 保存 html 的根标签
+    const html = document.documentElement;
+    
+    // document.all 表示页面中所有元素
+    const all = document.all;
+    console.log(all); // HTMLAllCollection(10)
+
+    // *
+    const allStar = document.getElementsByTagName("*");
+    console.log(allStar); // HTMLCollection(10)
+    const nodes = document.getRootNode;
+    // console.log(nodes);
+</script>
+</html>

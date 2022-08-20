@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包案例01</title>
+</head>
+<body>
+    <button>第一个按钮</button>
+    <button>第二个按钮</button>
+    <button>第三个按钮</button>
+    <script>
+        /* 循环遍历 + 监听 */
+        /* 业务逻辑：点击哪个按钮，就弹窗：是第几个按钮 */
+
+        /* 这样做是做不到的 */
+        /* const btns = document.getElementsByTagName("button")
+        for (var i = 0, length = btns.length; i < length; i++) {
+            btns[i].onclick = function () {
+                alert(`第${i + 1}个按钮`)
+            }
+        } */
+
+        /* 解决方案 1：给 btn 绑定下标 */
+        const btns = document.getElementsByTagName("button")
+        for (var i = 0, length = btns.length; i < length; i++) {
+            // 把 btn 对应的下标保存在 btn 上
+            this.index = i
+            this.onclick = function () {
+                alert(`第${this.index + 1}个按钮`)
+            }
+        }
+        
+        /*  */
+        /* const btns = document.getElementsByTagName("button")
+        for (var i = 0, length = btns.length; i < length; i++) {
+            (function (i) {
+                btns[i].onclick = function () {
+                alert(`第${i + 1}个按钮`)
+                btns[i] = null
+            }
+            })(i)
+        } */
+    </script>
+</body>
+</html>

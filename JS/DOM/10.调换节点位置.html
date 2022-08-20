@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container { height: 400px; width: 400px; background-color: pink; }
+        .box { height: 100px; width: 100px; background-color: bisque; margin-top: 10px;}
+        #house { height: 400px; width: 400px; background-color: deeppink; }
+        .room { height: 100px; width: 100px; background-color: skyblue; margin-top: 10px;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box">我是 box01</div>
+        <div class="box">我是 box02</div>
+        <div class="box">我是 box03</div>
+    </div>
+</body>
+<script>
+    const container = document.getElementById("container");
+    const box = container.getElementsByTagName("div");
+    container.insertBefore(box[2], box[1]); // 把 box[2] 插到 box[1] 前面
+</script>
+</html>

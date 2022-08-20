@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script>
+      /* 
+          函数名是禁止修改的，规范写的很清楚
+      */
+			function foo() {}
+      // console.log(foo.name);
+			var oldName = foo.name;
+			foo.name = "bar";
+			const itsName = [oldName, foo.name];
+      console.log(itsName);
+		</script>
+	</head>
+	<body></body>
+</html>

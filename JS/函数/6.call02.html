@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const obj = {name: "启灵元神", hobby: "makeup"};
+    function makeUp(a, b) {
+        console.log(a + b);
+        console.log(this);
+        console.log(arguments instanceof Array); // false
+        console.log(typeof(arguments)); // Object
+        console.log(arguments.length);
+        console.log(arguments[2]);
+        console.log(arguments.hasOwnProperty("callee")); // true
+        console.log(arguments.callee == makeUp); // true
+    }
+
+    // makeUp.call(obj, 2, 8)
+    makeUp.apply(obj, [3, 9])
+</script>
+</html>

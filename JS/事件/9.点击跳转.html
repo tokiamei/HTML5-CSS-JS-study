@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">点击跳转</div>
+    <script>
+        const box = document.getElementById('box')
+        box.addEventListener('click', () => {
+            // location.href = 'https://www.baidu.com'
+            // location.assign('https://www.baidu.com')
+            location.replace('https://www.baidu.com') // 无法回退了
+        })
+        // location.href = 'https://www.baidu.com'
+        // location.assign('https://www.baidu.com')
+        /* setTimeout(() => {
+            alert('要刷新页面了')
+            location.reload()
+        }, 1000) */
+    </script>
+</body>
+</html>

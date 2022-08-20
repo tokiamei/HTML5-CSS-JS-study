@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        width: 400px;
+        background-color: blue;
+        border: 1px solid red;
+      }
+      .clearFix:before,
+      .clearFix:after {
+        content: "";
+        display: table;
+      }
+      .clearFix:after {
+        clear: both;
+      }
+      .room01 {
+        float: left;
+        height: 200px;
+        width: 200px;
+        background-color: palevioletred;
+      }
+      .room02 {
+        float: left;
+        height: 150px;
+        width: 150px;
+        background-color: deeppink;
+      }
+      #bigBox {
+        height: 200px;
+        width: 400px;
+        background-color: rgb(200, 255, 0);
+        border: 1px solid rgb(115, 0, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="clearFix">
+      <div class="room01"></div>
+      <div class="room02"></div>
+    </div>
+    <div id="bigBox"></div>
+  </body>
+</html>

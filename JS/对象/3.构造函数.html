@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 构造函数，new 来调用
+    function person(name, address) {
+        this.name = name;
+        this.address = address;
+        console.log(this) 
+    }
+    var obj = new person("库拉皮卡", "黑暗深渊");
+    var obj2 = new person("雷欧力", "恶魔公寓");
+    console.log(obj);
+    console.log(obj2);
+</script>
+</html>

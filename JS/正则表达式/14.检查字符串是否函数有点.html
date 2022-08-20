@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>14.检查字符串是否函数有点</title>
+	</head>
+	<body>
+		<script>
+			/* 
+					. 表示任意字符
+					需要使用转义字符 \
+			 */
+			const reg = /\./
+			console.log(reg.test('*'));
+			
+			/* 检查字符串是否有 $ */
+			// const reg = /\$/
+			// console.log(reg.test('$'));
+			
+			/* 转移字符 */
+			// const reg = /\w/
+			// console.log(reg.test('_'));
+			
+			// const reg = /[A-z0-9_]/
+			// console.log(reg.test('&')); 
+		</script>
+	</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 普通插入表达式的方式
+        let a = 1, b = 2;
+        let str = "a = " + a + " b = " + b;
+        console.log(str); // a = 1 b = 2
+
+        // 利用模板字符串插入表达式
+        let string = `a = ${a} b = ${b}`;
+        console.log(string); // a = 1 b = 2
+
+        // 嵌套模板中写三目表达式
+        let demo01 = `a = ${3 > 2 ? 3 : 2}`; // a = 3
+        console.log(demo01);
+    </script>
+</body>
+</html>

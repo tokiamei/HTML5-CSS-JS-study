@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 浮动不会压住盒子中的文字或图片 */
+        /* #box {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+        } */
+        #box {
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="box">我是一个浮动的盒子</div> -->
+    <div id="box">我是一个绝对定位（固定定位）的盒子</div>
+    <p>你能完全压住我吗?????????????????????????????????????</p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>进度条案例</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 10px;
+            margin: 100px auto;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        .innBox {
+            width: 50%;
+            height: 100%;
+            margin-left: -1px;
+            border-radius: 5px;
+            background-color: red;
+            transition: all 0.3s linear ;
+        }
+        .box:hover .innBox {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="innBox"></div>
+    </div>
+</body>
+</html>

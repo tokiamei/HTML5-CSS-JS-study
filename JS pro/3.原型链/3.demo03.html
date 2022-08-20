@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function F() {
+            console.log("@aaaaaaa")
+        }
+        const obj = new F();
+        F.prototype.xyz = "大雨无眠"
+        console.log(obj.xyz)
+        console.log(F.xyz) // undefined
+
+        obj.__proto__.aaa = "混沌魔君索伦森"
+        console.log(obj.aaa)
+        console.log(obj.__proto__.constructor === F) // true
+        console.log(F.prototype.aaa) // 混沌魔君索伦森
+    </script>
+</body>
+</html> 

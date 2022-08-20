@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 圆角边框补充学习，圆形 -->
+    <style>
+      #box {
+        height: 200px;
+        width: 400px;
+        background-color: blueviolet;
+        border-radius: 100px; /* 50% 意思是宽度的一般 */
+      }
+      #room {
+        height: 200px;
+        width: 400px;
+        background-color: pink;
+        /* border-radius: 20px 60px 80px 100px; */ /* 分别是左上、右上、右下、左下 */
+        border-radius: 20px 60px; /* 左上和右下 20px，右上和左下 60px */
+      }
+    </style>
+  </head>
+  <body>
+    <p>这是一个盒子</p>
+    <div id="room"></div>
+    <p>这是另一个盒子</p>
+    <div id="box"></div>
+
+  </body>
+</html>
